@@ -27,5 +27,8 @@ public class Reteta {
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Ingredient> ingredients = new ArrayList<>();
 
+    @ManyToMany(mappedBy = "retete") // This is the inverse side of the relationship
+    private List<CarteDeBucate> cartiDeBucate;
+
 }
 

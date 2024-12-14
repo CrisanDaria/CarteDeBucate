@@ -26,4 +26,7 @@ public class RetetaService {
     public void deleteReteta(UUID id){
         retetaRepository.deleteById(id);
     }
+    public List<Reteta> searchReteta(String query) {
+        return retetaRepository.findByNumeContainingIgnoreCase(query); // Example search method
+    }
 }
